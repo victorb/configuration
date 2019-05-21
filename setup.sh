@@ -4,6 +4,8 @@
 # qutebrowser-config.py => ~/.config/qutebrowser/config.py
 # tmux.conf => ~/.tmux.conf
 # configuration.nix => /etc/nixos/configuration.nix
+# gitconfig => ~/.gitconfig
+# git-commit-template ~/.git-commit-template
 
 # More packages to install
 # Just a bunch of packages I use sometimes
@@ -69,5 +71,4 @@
 
 # Configs missing:
 # zshrc
-# git
 # alacritty
