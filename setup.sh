@@ -8,6 +8,7 @@
 # git-commit-template ~/.git-commit-template
 # zshrc => ~/.zshrc
 # /keybase/private/diggan/docs => ~/docs
+# alacritty.yml => ~/.config/alacritty/alacritty.yml
 
 # More packages to install
 # Just a bunch of packages I use sometimes
@@ -70,6 +71,3 @@
 # curl
 # deluge or transmission-gtk
 # discord
-
-# Configs missing:
-# alacritty
