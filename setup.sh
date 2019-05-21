@@ -6,6 +6,8 @@
 # configuration.nix => /etc/nixos/configuration.nix
 # gitconfig => ~/.gitconfig
 # git-commit-template ~/.git-commit-template
+# zshrc => ~/.zshrc
+# /keybase/private/diggan/docs => ~/docs
 
 # More packages to install
 # Just a bunch of packages I use sometimes
@@ -70,5 +72,4 @@
 # discord
 
 # Configs missing:
-# zshrc
 # alacritty
