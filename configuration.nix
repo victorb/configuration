@@ -23,7 +23,10 @@
 				pkgs.kbfs
 				pkgs.keybase-gui
 				pkgs.xsel
-				pkgs.git];
+				pkgs.git
+				pkgs.zsh
+				pkgs.autojump
+				pkgs.gnupg];
 
   # Use the GRUB 2 boot loader.
   boot.loader.grub.enable = true;
@@ -68,6 +71,8 @@
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
+  programs.autojump.enable = true;
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
@@ -107,9 +112,12 @@
 
   # Enable the KDE Desktop Environment.
   # services.xserver.desktopManager.plasma5.enable = true;
+  
+  programs.zsh.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.user = {
+    shell = pkgs.zsh;
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
   };
