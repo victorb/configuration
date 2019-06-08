@@ -10,8 +10,8 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
-local volume_control = require("volume-control")
-local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
+-- local volume_control = require("volume-control")
+-- local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -42,11 +42,11 @@ end
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(awful.util.get_themes_dir() .. "default/theme.lua")
 
-volumecfg = volume_control({device = "pulse"})
+-- volumecfg = volume_control({device = "pulse"})
 
 
 -- This is used later as the default terminal and editor to run.
-terminal = "/usr/bin/alacritty"
+terminal = "/run/current-system/sw/bin/alacritty"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -219,7 +219,7 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
             mykeyboardlayout,
             wibox.widget.systray(),
-            cpu_widget,
+            -- cpu_widget,
             mytextclock,
             s.mylayoutbox,
         },
@@ -371,9 +371,9 @@ globalkeys = awful.util.table.join(
     end),
 
     -- Control volume
-    awful.key({}, "XF86AudioRaiseVolume", function() volumecfg:up() end),
-    awful.key({}, "XF86AudioLowerVolume", function() volumecfg:down() end),
-    awful.key({}, "XF86AudioMute",        function() volumecfg:toggle() end),
+    -- awful.key({}, "XF86AudioRaiseVolume", function() volumecfg:up() end),
+    -- awful.key({}, "XF86AudioLowerVolume", function() volumecfg:down() end),
+    -- awful.key({}, "XF86AudioMute",        function() volumecfg:toggle() end),
 
     -- Take screeshot
     awful.key({ }, "Print", function () awful.util.spawn_with_shell("maim -s | xclip -selection clipboard -t image/png") end)
