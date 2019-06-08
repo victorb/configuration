@@ -1,11 +1,11 @@
 [user]
 	email = git@victor.earth
 	name = victorbjelkholm
-	signingkey = C0D63D4F1F82F929FDDD7E1C2C7BE98EF82CECB6
+	# signingkey = C0D63D4F1F82F929FDDD7E1C2C7BE98EF82CECB6
 [commit]
-	gpgsign = true
-	template = /home/user/.git-commit-template
+	# gpgsign = true
+	# template = /home/user/.git-commit-template
 [gpg]
-	program = /usr/bin/gpg
+	program = /run/current-system/sw/bin/gpg
 [merge]
 	tool = meld
