@@ -1,6 +1,6 @@
 source ~/antigen.zsh
 antigen use oh-my-zsh
-antigen bundle command-not-found
+# antigen bundle command-not-found
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 antigen theme robbyrussell
@@ -48,7 +48,7 @@ export PATH="${PATH}:/home/user/.config/yarn/global/node_modules/.bin/"
 # fi
 
 # Initialize autojump
-. /usr/share/autojump/autojump.zsh
+. /run/current-system/sw/share/autojump
 
 # GIT BEGIN
 alias pull='pull_from_upstream'
@@ -114,5 +114,5 @@ alias :q=exit
 setxkbmap -layout us
 setxkbmap -option caps:escape
 
-eval $(gnome-keyring-daemon --start)
-export SSH_AUTH_SOCK
+# eval $(gnome-keyring-daemon --start)
+# export SSH_AUTH_SOCK
