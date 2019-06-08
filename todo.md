@@ -1,0 +1,3 @@
+- [ ] Get back volume control and CPU usage indicator
+- [ ] Create new signing key for git operations
+- [ ] Make paths OS agnostic (for ubuntu + arch + nixos)
