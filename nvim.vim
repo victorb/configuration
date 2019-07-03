@@ -122,6 +122,10 @@ autocmd FileType make setlocal noexpandtab
 autocmd FileType js set shiftwidth=2|set expandtab
 autocmd FileType javascript set shiftwidth=2|set expandtab
 
+" Proper yaml formatting
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
+
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
@@ -130,28 +134,12 @@ let g:tern_request_timeout = 1
 let g:tern_show_signature_in_pum = '1'
 
 set spelllang=en_us
-" set spell
 
 " Save, always
 command WQ wq
 command Wq wq
 command W w
 command Q q
-
-" Go to last active tab
-" au TabLeave * let g:lasttab = tabpagenr()
-" nnoremap <silent> <tab> :exe "tabn ".g:lasttab<cr>
-" TODO collides with TAB and jump to next location
-
-" Automatically create session file if needed
-" autocmd VimEnter * nested
-" 			\ if !argc() && empty(v:this_session) && !modified|
-" 			\   if filereadable('Session.vim') |
-" 			\     source Session.vim |
-" 			\   elseif |
-" 			\     Obsession |
-" 			\   endif |
-" 			\ endif
 
 let g:go_fmt_command = "goimports"
 
@@ -162,6 +150,9 @@ let g:NERDTrimTrailingWhitespace = 1
 
 " vim-jsx not requiring .jsx extension
 let g:jsx_ext_required = 0
+
+" Let terraform format on save
+let g:terraform_fmt_on_save = 1
 
 " let g:neomake_javascript_enabled_makers = ['flow', 'standard']
 " let g:neomake_jsx_enabled_makers = ['flow', 'standard']
